@@ -1,0 +1,51 @@
+{
+  "manifest_version": 2,
+  "name": "Backpackerz Music Controller",
+  "description": "adds a buster to your calls",
+  "icons": {
+      "16": "icons/icon16.png",
+      "20": "icons/icon20.png",
+      "32": "icons/icon32.png",
+      "64": "icons/icon64.png",
+      "128": "icons/icon128.png"
+  },
+  "version": "1.1",
+  "background": {
+    "scripts": ["controller.js"]
+  },
+  "options_page": "config/config.html",
+  "browser_action": {
+    "name": "Click to activate controller"
+  },
+  "commands": {
+    "toggle-feature-foo": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y",
+        "mac": "Command+Shift+Y"
+      },
+      "description": "Toggle feature foo",
+      "global": true
+    },
+    "_execute_browser_action": {
+      "suggested_key": {
+        "windows": "Ctrl+Shift+Y",
+        "mac": "Command+Shift+Y",
+        "chromeos": "Ctrl+Shift+U",
+        "linux": "Ctrl+Shift+J"
+      }
+    },
+    "_execute_page_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+E",
+        "windows": "Alt+Shift+P",
+        "mac": "Alt+Shift+P"
+      }
+    }
+  },
+  "permissions": [
+    "activeTab",
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>"
+  ]
+}
